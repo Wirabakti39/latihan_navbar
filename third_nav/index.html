@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Third_Nav</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">DwB</a>
+            <ul class="links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="nav-button">
+                <svg class="burger-menu" xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#fff"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+                <svg class="close-menu links-opened" xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#fff"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        const burgerMenu = document.querySelector('.burger-menu')
+        const closeMenu = document.querySelector('.close-menu')
+        const navLinks = document.querySelector('.navbar .links')
+
+        burgerMenu.addEventListener('click', () => {
+            burgerMenu.style.display = 'none';
+            closeMenu.style.display = 'block';
+
+            navLinks.style.height = '20rem';
+            navLinks.style.padding = '2.4rem 0';
+        })
+        closeMenu.addEventListener('click', () => {
+            burgerMenu.style.display = 'block';
+            closeMenu.style.display = 'none';
+
+            navLinks.style.height = '0';
+            navLinks.style.padding = '0';
+        })
+
+    </script>
+</body>
+</html>
