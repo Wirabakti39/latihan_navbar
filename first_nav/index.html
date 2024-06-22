@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Navigation Bar</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="#home">DwB</a>
+        </div>
+        <ul class="links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <ul class="dropdown">
+            <li>
+                <svg class="close-menu" xmlns="http://www.w3.org/2000/svg" height="34px" viewBox="0 -960 960 960" width="34px" fill="#e2bd6b"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+            </li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="toggle-btn">
+            <svg class="burger-menu" xmlns="http://www.w3.org/2000/svg" height="34px" viewBox="0 -960 960 960" width=34px" fill="#e2bd6b"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+        </div>  
+    </nav>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle-btn')
+        const dropdown = document.querySelector('.dropdown')
+        const closeBtn = document.querySelector('.close-menu')
+
+        toggleBtn.addEventListener('click', function() {
+            dropdown.style.display = 'flex';
+            toggleBtn.style.display = 'none';
+        });
+
+        closeBtn.addEventListener('click', function() {
+            dropdown.style.display = 'none';
+            toggleBtn.style.display = 'flex';
+        })
+    </script>
+</body>
+</html>
